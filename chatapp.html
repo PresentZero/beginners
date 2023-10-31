@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        #left-section {
+            width: 25%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        #top-header {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #444;
+        }
+
+        #list-of-chats {
+            overflow-y: scroll;
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+        .chat-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .chat-item:hover {
+            background-color: #555;
+        }
+
+        #bottom-section {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #444;
+        }
+
+        #profile-section {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            background-color: #444;
+        }
+
+        #right-section {
+            flex-grow: 1;
+            background-color: #ddd;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #top-button-section {
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ccc;
+        }
+
+        #top-button-section button {
+            padding: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #top-button-section button:hover {
+            background-color: #bbb;
+        }
+
+        #middle-section {
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            background-color: #ccc;
+        }
+
+        #bottom-right-section {
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #ccc;
+        }
+
+        #send-message-bar {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            margin-top: auto;
+            transition: border-color 0.3s;
+        }
+
+        #send-message-bar:hover {
+            border-color: #555;
+        }
+
+        #send-message-btn {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #send-message-btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="left-section">
+        <div id="top-header">
+            <button id="new-chat-btn">New Chat</button>
+            <button id="hide-sidebar-btn">Hide Sidebar</button>
+        </div>
+        <div id="list-of-chats">
+            <!-- Chat items will be dynamically added here -->
+            <div class="chat-item">Chat 1</div>
+            <div class="chat-item">Chat 2</div>
+            <div class="chat-item">Chat 3</div>
+            <div class="chat-item">Chat 4</div>
+            <div class="chat-item">Chat 5</div>
+            <div class="chat-item">Chat 6</div>
+            <div class="chat-item">Chat 7</div>
+            <div class="chat-item">Chat 8</div>
+        </div>
+        <div id="bottom-section">
+            <button id="upward-arrow-btn">&#x2191;</button>
+            <span id="upgrade-text">Upgrade to Plus</span>
+        </div>
+        <div id="profile-section">
+            <div id="profile-icon">&#128100;</div>
+            <span id="username">Your Username</span>
+            <button id="three-dots-btn">&#8226;&#8226;&#8226;</button>
+        </div>
+    </div>
+
+    <div id="right-section">
+        <div id="top-button-section">
+            <button id="btn-1">
+                <span>&#9889;</span> GPT-3.5
+            </button>
+            <button id="btn-2">
+                <span>&#9733;</span> GPT-4
+            </button>
+        </div>
+        <div id="middle-section">
+            Chat Gpt
+        </div>
+        <div id="bottom-right-section">
+            <input type="text" id="send-message-bar" placeholder="Type your message...">
+            <button id="send-message-btn">Send</button>
+        </div>
+    </div>
+</body>
+</html>
